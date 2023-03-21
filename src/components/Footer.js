@@ -10,7 +10,6 @@ function Footer() {
             <i className="fab fa-linkedin"></i>
           </a>
         </div>
-        <fp>Contact: <a href="mailto:moritz1996.mueller@gmail.com">moritz1996.mueller@gmail.com</a></fp>
       </div>
     </footer>
   );

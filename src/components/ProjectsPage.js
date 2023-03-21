@@ -20,13 +20,12 @@ function ProjectsPage() {
   return (
     <div className="projects-page">
     {projects.map((project) => (
-        <div key={project.title}>
+        <div key={project.title} className="projects-page">
         <h3>{project.title}</h3>
         <p>{project.text}</p>
         <Link to={project.link}>
             <img src={project.imageUrl} style={{ display: 'block', margin: 'auto' }} />
         </Link>
-        <br />
         </div>
     ))}
     </div>

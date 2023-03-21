@@ -10,6 +10,15 @@ return (
 <p>Currently, I am a Visiting Student at the MIT Center for Collective Intelligence working on a topic related to visual tracking system for PERMA estimation using state-of-the-art deep neural networks and frameworks.</p>
 <p>In my free time, I love to keep up with the latest technological advancements in the industry, work on personal projects and collaborate with like-minded individuals to tackle challenging problems.</p>
 <p>Feel free to reach out to me via moritz1996.mueller@gmail.com or connect with me on LinkedIn to discuss potential opportunities, collaborations or just to chat.</p>
+<br />
+  <div className="image-container">
+    <h3>Education:</h3>
+    <img src={process.env.PUBLIC_URL + '/images/schools.png'} alt="My School" />
+      <br />
+      <br />
+    <h3>Work Experience:</h3>
+    <img src={process.env.PUBLIC_URL + '/images/work.png'} alt="My Work Experience" />
+  </div>
 </div>
 );
 }

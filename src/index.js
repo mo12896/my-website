@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
@@ -18,11 +17,10 @@ function App() {
     <BrowserRouter>
       <div className="container">
         <nav className="navbar">
-          <h1 className="logo">Moritz Müller</h1>
+          <Link to="/">
+            <h1 className="logo">Moritz Müller</h1>
+          </Link>
           <ul className="nav-links">
-            <li>
-              <Link to="/">Home</Link>
-            </li>
             <li>
               <Link to="/projects">Projects</Link>
             </li>
