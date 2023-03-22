@@ -78,7 +78,7 @@ p {
 
 /* Style the individual pages */
 .home-page {
-  margin: 0 auto;
+  margin: 0 auto 1000px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -97,7 +97,7 @@ p {
 }
 
 .about-page, .contact-page {
-  margin: 150px auto;
+  margin: 1000px auto 250px auto;
   display: flex;
   flex-direction: column;
   align-items: center;

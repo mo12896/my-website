@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
+import { Link, Element } from 'react-scroll';
 import HomePage from './components/HomePage';
 import AboutPage from './components/AboutPage';
 import ContactPage from './components/ContactPage';
@@ -17,29 +18,33 @@ function App() {
     <BrowserRouter>
       <div className="container">
         <nav className="navbar">
-          <Link to="/">
+          <Link to="home" smooth={true} duration={1000}>
             <h1 className="logo">Moritz Müller</h1>
           </Link>
           <ul className="nav-links">
             <li>
-              <Link to="/projects">Projects</Link>
+              <Link to="projects" smooth={true} duration={1000} offset={-100}>Projects</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="about" smooth={true} duration={1000} offset={-100}>About</Link>
             </li>
             <li>
-              <Link to="/contact">Contact</Link>
+              <Link to="contact" smooth={true} duration={1000}>Contact</Link>
             </li>
           </ul>
         </nav>
-        <Routes>
-          <React.Fragment>
-            <Route exact path="/" element={<HomePage />} />
-            <Route path="/projects" element={<ProjectsPage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-          </React.Fragment>
-        </Routes>
+        <Element name="home">
+          <HomePage />
+        </Element>
+        <Element name="projects">
+          <ProjectsPage />
+        </Element>
+        <Element name="about">
+          <AboutPage />
+        </Element>
+        <Element name="contact">
+          <ContactPage />
+        </Element>
         <Footer />
       </div>
     </BrowserRouter>
@@ -55,3 +60,4 @@ ReactDOM.render(<App />, document.getElementById('root'));
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
